@@ -29,5 +29,9 @@ function drawPoly(arr) {
     canvas.fill(); // Зальем полученный многоугольник цветом
     }
     
+function createArray() {
+    
+}
     
 drawPoly(coordArray);
+
