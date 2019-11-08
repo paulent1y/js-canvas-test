@@ -24,8 +24,15 @@ let ctx = canvas.getContext('2d');
 let wx = window.innerWidth;
 let wy = window.innerHeight;
 
+
+
+
 canvas.width = wx;
 canvas.height = wy;
+
+ctx.fillStyle = '#FF0000';
+ctx.fillRect(25,25,100,100);
+
 
 function screenUpdate() {
     console.log(1);
@@ -76,6 +83,10 @@ function drawGameField() {
     //вывод в консольку для отладки зачем я это пишу
     console.log(ax,ay,fs*2,fs*2);
     console.log(TILES_AMOUNT, tileSize, fieldSide);
+    for (let i =0; i<TILES_AMOUNT;i++){
+        for (let j = 0; j<TILES_AMOUNT; j++)
+            {}
+    }
 }
 
 
