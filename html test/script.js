@@ -6,7 +6,7 @@ let div = document.createElement('div');
 gamePage.append(div);
 gamePage.style.width = `100%`;
 gamePage.style.height = '100%';
-gamePage.style.backgroundColor = '#ff0000';
+gamePage.style.backgroundColor = '#F28159';
 
 let wx = window.innerWidth;
 let wy = window.innerHeight;
@@ -42,14 +42,42 @@ for (let i = 0; i < NUMBER_OF_TILES; i++){
     tile.style.height = `${tileSize*k}px`;
     tile.style.position = "absolute";
     tile.onmouseover = function(){this.style.backgroundColor = "#FF0000"};
-    tile.onmouseout = function(){this.style.backgroundColor = "#0000ff"};
-    console.log(i);
+    tile.onmouseout = function(){this.style.backgroundColor = "#2345B7"};
+    console.log(i); 
     tile.style.top = `${(tileSize)*i+tileOffset/2}px`;
     tile.style.left = `${(tileSize)*j+tileOffset/2}px`;
-    tile.style.backgroundColor = "#0000ff";
+    tile.style.backgroundColor = "#2345B7";
     field.append(tile);
     tilesArray.push(tile);
     console.log(tile, pos, i); 
     pos++;
   }
 }
+
+function randomColor() { 
+  return (
+    "rgba(" +
+    Math.round(30 + Math.random() * 255) +
+    "," +
+    Math.round(30 + Math.random() * 255) +
+    "," +
+    Math.round(30 + Math.random() * 255) +
+    "," + 1 + 
+    // Math.ceil(Math.random() * 10) / 10 +
+    ")"
+  );
+}
+
+function change() {
+  for (let i = 0; i<1; i++){
+  let x = Math.round(Math.random() * (NUMBER_OF_TILES-1));
+  let y = Math.round(Math.random() * (NUMBER_OF_TILES-1));
+  ranEl = document.getElementsByClassName(`i${x} j${y}`)[0];
+  ranEl.style.backgroundColor = randomColor();
+  }
+  // console.log(ranEl);
+  // console.log(x);
+}
+
+
+setInterval(change,1)
