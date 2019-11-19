@@ -29,7 +29,7 @@ ay = ycenter - fieldSide/2;
 field.style.top = ay.toString() + "px";
 field.style.left = ax.toString() + "px";
 gamePage.append(field);
-k = 0.85
+k = 0.85;
 let tileSize = fieldSide/NUMBER_OF_TILES;
 let tileOffset = fieldSide/NUMBER_OF_TILES * (1-k);
 let tilesArray = [];
