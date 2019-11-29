@@ -92,9 +92,9 @@ function drawHero() {
   c.fill();  
 }
 
-function moveHero() {
-  character.x += (mx-character.x) /character.speed;
-  character.y += (my-character.y) /character.speed;
+function moveHero(x) {
+  character.x += (mx-character.x) /character.speed/40*x;
+  character.y += (my-character.y) /character.speed/40*x;
 
 
   // if (character.y > my)
@@ -112,9 +112,10 @@ function updateScreen () {
   c.clearRect(0,0,wx,wy);
   // drawCircles(20);
   // drawRectangles(20);
+  
+  initialDelay = 2;
   drawHero();
-  moveHero();
-  initialDelay = 33;
+  moveHero(initialDelay);
   setTimeout(updateScreen, initialDelay); //17ms for 60 fps, 33ms for 30fps
 }
 
