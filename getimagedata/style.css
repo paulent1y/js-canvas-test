@@ -1,0 +1,17 @@
+body, html {
+    margin:0px;
+    padding:0px;
+    top:0;
+    left:0;
+}
+
+canvas {
+
+    margin: 0px;
+    padding: 0px;
+    top:0;
+    left:0;
+    background-color: rgba(56, 221, 250, 0.151);
+
+} 
+

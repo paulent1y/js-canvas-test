@@ -1,15 +1,11 @@
+//задаем канвас и режим рисования
+let canvas = document.getElementById("canvas");
+let c = canvas.getContext("2d");
 
 
-function createCanvasInBody(id = "myDiv"){
-    //создает див с id в переданном параметре, возвращает id
-    let el = document.createElement("canvas");
-    el.id = id;
-    document.body.append(el);
-    return el;  
-}
-
-
-
-
-
+//задаем размеры окна и канваса
+let wx = window.innerWidth;
+let wy = window.innerHeight;
+canvas.width = wx;
+canvas.height = wy;
 
